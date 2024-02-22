@@ -16,6 +16,33 @@ class HomeView extends StatelessWidget {
         builder: (context, state) {
           var cubit = IcanCubit.get(context);
           return Scaffold(
+            backgroundColor: Colors.white,
+            appBar: AppBar(
+              title: const Text('Home '),
+              centerTitle: true,
+              leading: Padding(
+                padding: const EdgeInsets.all(2.0),
+                child: Image.asset(
+                  'assets/images/ican after edit.jpg',
+                  //  scale:1,
+                ),
+              ),
+              backgroundColor: Theme.of(context).scaffoldBackgroundColor,
+              elevation: 0,
+              actions: [
+                IconButton(
+                  onPressed: () {},
+                  icon: CircleAvatar(
+                    radius: 18,
+                    backgroundColor: Colors.amber[300],
+                    child: const Icon(
+                      FontAwesomeIcons.exclamation,
+                      size: 18,
+                    ),
+                  ),
+                ),
+              ],
+            ),
             bottomNavigationBar: Container(
               decoration: const BoxDecoration(color: Colors.black),
               child: BottomNavigationBar(
@@ -25,7 +52,7 @@ class HomeView extends StatelessWidget {
                 },
                 backgroundColor: Colors.black,
                 selectedItemColor: Colors.amber,
-                unselectedItemColor: Colors.blueGrey,
+                unselectedItemColor: Colors.black.withOpacity(0.8),
                 items: const [
                   BottomNavigationBarItem(
                       icon: Icon(FontAwesomeIcons.house), label: 'home'),
@@ -42,7 +69,7 @@ class HomeView extends StatelessWidget {
                 ],
               ),
             ),
-            body:cubit.screensNave[cubit.currentIndex],
+            body: cubit.screensNave[cubit.currentIndex],
           );
         },
       ),
