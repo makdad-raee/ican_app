@@ -12,10 +12,9 @@ class DesignSection extends StatelessWidget {
           padding: EdgeInsets.all(10.0),
           child: CutomScrollItemDesign(
             imageUrl:
-                'https://img.freepik.com/premium-psd/realistic-iphone-14-pro-max-3d-smartphone-screen-mockup-template-with-editable-background-psd_349001-554.jpg?w=740',
+                'https://img.freepik.com/free-photo/abstract-colorful-splash-3d-background-generative-ai-background_60438-2494.jpg?w=826&t=st=1708630449~exp=1708631049~hmac=97cd470c64d52bb5e728689ce09b6c1d0f779389be19beb68bb24044367a191a',
           ),
         ),
-        
       ],
     );
   }
@@ -40,7 +39,7 @@ class CutomScrollItemDesign extends StatelessWidget {
       child: Column(
         children: [
           Container(
-            height: 300,
+            height: 350,
             width: width,
             decoration: BoxDecoration(
                 boxShadow: [
@@ -61,7 +60,6 @@ class CutomScrollItemDesign extends StatelessWidget {
               child: Column(
                 //  crossAxisAlignment: CrossAxisAlignment.center,
 
-                //mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   Container(
                     height: 250,
@@ -71,16 +69,26 @@ class CutomScrollItemDesign extends StatelessWidget {
                         borderRadius: BorderRadius.circular(24)),
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(24),
-                      child: Image.network(imageUrl),
+                      child: Image.network(
+                        imageUrl,
+                        fit: BoxFit.cover,
+                      ),
                     ),
                   ),
+                  const Spacer(
+                   
+                  ),
                   Text(
-                    "  Design",
+                    "Graphic Designs & Logos",
                     style: GoogleFonts.lato(
                         color: Colors.black,
                         fontSize: 18,
-                        fontWeight: FontWeight.w600),
+                        fontWeight: FontWeight.w500),
                   ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 78.0,vertical: 12),
+                    child: Container(height: 1,color: Colors.grey,),
+                  )
                 ],
               ),
             ),

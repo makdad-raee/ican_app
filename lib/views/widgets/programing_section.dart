@@ -89,7 +89,7 @@ class CutomScrollItem extends StatelessWidget {
                               borderRadius: BorderRadius.circular(24)),
                           child: ClipRRect(
                               borderRadius: BorderRadius.circular(24),
-                              child: Image.network(imageUrl)),
+                              child: Image.network(imageUrl,fit: BoxFit.cover,),),
                         ),
                         Text(
                           "  Android  Application",
