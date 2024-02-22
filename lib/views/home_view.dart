@@ -63,8 +63,9 @@ class _HomeViewState extends State<HomeView> {
                   icon: const Icon(Icons.more_horiz),
                   onPressed: () {
                     DropdownButton(
+                      
                         alignment: AlignmentDirectional.center,
-                        padding: const EdgeInsets.all(12),
+                        //padding: const EdgeInsets.all(12),
                         value: selectedValue,
                         items: items,
                         onChanged: (value) {

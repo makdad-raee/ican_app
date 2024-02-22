@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:ican_app/manger/cupit/ican_state.dart';
+import 'package:ican_app/views/widgets/design_section.dart';
 import 'package:ican_app/views/widgets/programing_section.dart';
 
 class IcanCubit extends Cubit<IcanState> {
@@ -14,8 +15,7 @@ class IcanCubit extends Cubit<IcanState> {
   List<Widget> screensNave = const [
     ProgramingSection(),
     ProgramingSection(),
-    ProgramingSection(),
-    ProgramingSection(),
+    DesignSection(),
     ProgramingSection(),
   ];
   List<String> titlels = const [];

@@ -10,10 +10,10 @@ class ProgramingSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    List<Widget> programingList=const[
-AndroidViewSection(),
-IosViewSection(),
-WebViewSection(),
+    List<Widget> programingList = const [
+      AndroidViewSection(),
+      IosViewSection(),
+      WebViewSection(),
     ];
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -23,12 +23,12 @@ WebViewSection(),
             scrollDirection: Axis.horizontal,
             separatorBuilder: (context, index) => const SizedBox(width: 0),
             itemCount: 3,
-            itemBuilder: (context, index) =>
-                CutomScrollItem(imageUrl: imageUrlHomeView[index],
+            itemBuilder: (context, index) => CutomScrollItem(
+                imageUrl: imageUrlHomeViewApp[index],
                 sectionWedget: programingList[index]),
           ),
         ),
-       // const Expanded(child: HomeViewSection2())
+        // const Expanded(child: HomeViewSection2())
       ],
     );
   }
@@ -37,7 +37,8 @@ WebViewSection(),
 class CutomScrollItem extends StatelessWidget {
   const CutomScrollItem({
     super.key,
-    required this.imageUrl, required this.sectionWedget,
+    required this.imageUrl,
+    required this.sectionWedget,
   });
   final String imageUrl;
   final Widget sectionWedget;
@@ -46,7 +47,9 @@ class CutomScrollItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        Navigator.of(context).push(MaterialPageRoute(builder: (context) => sectionWedget,));
+        Navigator.of(context).push(MaterialPageRoute(
+          builder: (context) => sectionWedget,
+        ));
       },
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -110,4 +113,3 @@ class CutomScrollItem extends StatelessWidget {
     );
   }
 }
-
