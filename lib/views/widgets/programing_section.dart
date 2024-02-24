@@ -28,6 +28,7 @@ class ProgramingSection extends StatelessWidget {
                 sectionWedget: programingList[index]),
           ),
         ),
+        const Expanded(child: ProgramingDescreption())
         // const Expanded(child: HomeViewSection2())
       ],
     );
@@ -88,8 +89,12 @@ class CutomScrollItem extends StatelessWidget {
                               // color: Colors.yellow[700],
                               borderRadius: BorderRadius.circular(24)),
                           child: ClipRRect(
-                              borderRadius: BorderRadius.circular(24),
-                              child: Image.network(imageUrl,fit: BoxFit.cover,),),
+                            borderRadius: BorderRadius.circular(24),
+                            child: Image.network(
+                              imageUrl,
+                              fit: BoxFit.cover,
+                            ),
+                          ),
                         ),
                         Text(
                           "  Android  Application",
@@ -107,6 +112,48 @@ class CutomScrollItem extends StatelessWidget {
                 width: 18,
               ),
             ],
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class ProgramingDescreption extends StatelessWidget {
+  const ProgramingDescreption({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 8.0),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        // mainAxisAlignment: MainAxisAlignment.,
+        children: [
+          //  / SizedBox(width: 5,),
+          Text(
+            ' حوّل أفكارك إلى تطبيقات ذكية على مختلف المنصات مع  ICan .',
+            maxLines: 2,
+            textDirection: TextDirection.rtl,
+            //overflow: TextOverflow.fade,
+            textAlign: TextAlign.right,
+            style: GoogleFonts.mada(fontSize: 24),
+          ),
+          Text(
+            '- تطبيقات مُخصصة تناسب احتياجاتك وأهدافك، على Android و iOS و Web. ',
+            maxLines: 2,
+            textDirection: TextDirection.rtl,
+            //overflow: TextOverflow.fade,
+            textAlign: TextAlign.right,
+            style: GoogleFonts.mada(fontSize: 16),
+          ),
+          Text(
+            ' - ارفع علامتك التجارية إلى آفاق جديدة مع حلولنا المُتكاملة لتطوير التطبيقات.',
+            maxLines: 2,
+            textDirection: TextDirection.rtl,
+            //overflow: TextOverflow.fade,
+            textAlign: TextAlign.right,
+            style: GoogleFonts.mada(fontSize: 16),
           ),
         ],
       ),

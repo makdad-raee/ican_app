@@ -42,7 +42,15 @@ class _HomeViewState extends State<HomeView> {
               backgroundColor: Colors.yellow[700],
               child: IconButton(
                   tooltip: 'Call Us',
-                  onPressed: () {},
+                  onPressed: () async {
+                    // final phoneNumber = '1234567890';
+                    // final url = 'tel:$phoneNumber';
+                    // if (await canLaunch(url)) {
+                    //   await launch(url);
+                    // } else {
+                    //   throw 'Could not launch $url';
+                    // }
+                  },
                   icon: const Icon(FontAwesomeIcons.phone)),
             ),
             backgroundColor: Colors.white,
@@ -63,7 +71,6 @@ class _HomeViewState extends State<HomeView> {
                   icon: const Icon(Icons.more_horiz),
                   onPressed: () {
                     DropdownButton(
-                      
                         alignment: AlignmentDirectional.center,
                         //padding: const EdgeInsets.all(12),
                         value: selectedValue,
