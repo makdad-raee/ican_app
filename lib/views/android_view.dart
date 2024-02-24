@@ -18,7 +18,7 @@ class AndroidViewSection extends StatelessWidget {
       body: const SingleChildScrollView(
         child: Column(
           children: [
-            AndroidPhoto(),
+            AndroidPhotoIosWeb(imagesectiontitle: "Android Application"),
             SizedBox(
               height: 12,
             ),
@@ -86,10 +86,11 @@ class DescriptionTopic extends StatelessWidget {
   }
 }
 
-class AndroidPhoto extends StatelessWidget {
-  const AndroidPhoto({
-    super.key,
+class AndroidPhotoIosWeb extends StatelessWidget {
+  const AndroidPhotoIosWeb({
+    super.key, required this.imagesectiontitle,
   });
+  final String imagesectiontitle;
 
   @override
   Widget build(BuildContext context) {
@@ -141,7 +142,7 @@ class AndroidPhoto extends StatelessWidget {
                   ),
                   const Spacer(),
                   Text(
-                    "Android Application",
+                    imagesectiontitle,
                     style: GoogleFonts.lato(
                         color: Colors.black,
                         fontSize: 24,

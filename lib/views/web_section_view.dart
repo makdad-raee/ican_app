@@ -14,7 +14,7 @@ class WebViewSection extends StatelessWidget {
       ),
       body: const Column(
         children: [
-          AndroidPhoto(),
+          AndroidPhotoIosWeb(imagesectiontitle: 'Web Application'),
           SizedBox(
             height: 12,
           ),

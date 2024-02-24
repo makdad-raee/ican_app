@@ -14,7 +14,7 @@ class IosViewSection extends StatelessWidget {
       ),
       body: const Column(
         children: [
-          AndroidPhoto(),
+          AndroidPhotoIosWeb(imagesectiontitle: 'Ios Application'),
           SizedBox(
             height: 12,
           ),

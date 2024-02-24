@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:ican_app/manger/cupit/ican_cubit.dart';
 import 'package:ican_app/manger/cupit/ican_state.dart';
+import 'package:ican_app/views/company_view.dart';
 
 class HomeView extends StatefulWidget {
   const HomeView({super.key});
@@ -47,7 +48,7 @@ class _HomeViewState extends State<HomeView> {
             ),
             backgroundColor: Colors.white,
             appBar: AppBar(
-              title:  Text(cubit.apparTitles[cubit.currentIndex]),
+              title: Text(cubit.apparTitles[cubit.currentIndex]),
               centerTitle: true,
               leading: Padding(
                 padding: const EdgeInsets.all(2.0),
@@ -60,19 +61,16 @@ class _HomeViewState extends State<HomeView> {
               elevation: 0,
               actions: [
                 IconButton(
-                  icon: const Icon(Icons.more_horiz),
+                  icon: const CircleAvatar(
+                    backgroundColor: Color.fromARGB(255, 253, 216, 40),
+                    radius: 24,
+                    child: Icon(
+                      FontAwesomeIcons.userGroup,
+                      size: 18,
+                    ),
+                  ),
                   onPressed: () {
-                    DropdownButton(
-                        alignment: AlignmentDirectional.center,
-                        //padding: const EdgeInsets.all(12),
-                        value: selectedValue,
-                        items: items,
-                        onChanged: (value) {
-                          setState(() {
-                            selectedValue = value!;
-                          });
-                        });
-                    setState(() {});
+                   Navigator.of(context).push(MaterialPageRoute(builder: (context) => const CompanyView(),));
                   },
                 )
               ],
