@@ -15,6 +15,11 @@ class ProgramingSection extends StatelessWidget {
       IosViewSection(),
       WebViewSection(),
     ];
+    List<String> programingtitleList = const [
+      ' Android Application',
+      ' Ios Application',
+      ' Web Application',
+    ];
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -24,6 +29,7 @@ class ProgramingSection extends StatelessWidget {
             separatorBuilder: (context, index) => const SizedBox(width: 0),
             itemCount: 3,
             itemBuilder: (context, index) => CutomScrollItem(
+                titleSection: programingtitleList[index],
                 imageUrl: imageUrlHomeViewApp[index],
                 sectionWedget: programingList[index]),
           ),
@@ -40,9 +46,11 @@ class CutomScrollItem extends StatelessWidget {
     super.key,
     required this.imageUrl,
     required this.sectionWedget,
+    required this.titleSection,
   });
   final String imageUrl;
   final Widget sectionWedget;
+  final String titleSection;
 
   @override
   Widget build(BuildContext context) {
@@ -96,8 +104,11 @@ class CutomScrollItem extends StatelessWidget {
                             ),
                           ),
                         ),
+                        SizedBox(
+                          height: 8,
+                        ),
                         Text(
-                          "  Android  Application",
+                          titleSection,
                           style: GoogleFonts.lato(
                               color: Colors.black,
                               fontSize: 18,

@@ -15,7 +15,7 @@ class MontagueSection extends StatelessWidget {
                 'https://img.freepik.com/free-photo/integrate-scene-mobile-screen-frame_23-2150678786.jpg?w=740&t=st=1708761529~exp=1708762129~hmac=a48463920fefdb1843a323900f1c5a60e0d2119cf9e4d687947eda70467234aa',
           ),
         ),
-        MontagueDescription()
+        MontagueDescription(),
       ],
     );
   }

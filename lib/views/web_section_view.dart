@@ -9,12 +9,16 @@ class WebViewSection extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        backgroundColor: Colors.white,
+        backgroundColor: Colors.yellow[600],
         title: const Text('Web Services '),
       ),
       body: const Column(
         children: [
-            DescriptionTopic()
+          AndroidPhoto(),
+          SizedBox(
+            height: 12,
+          ),
+          DescriptionTopic(topic: 'Web Application')
         ],
       ),
     );

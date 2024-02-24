@@ -42,20 +42,12 @@ class _HomeViewState extends State<HomeView> {
               backgroundColor: Colors.yellow[700],
               child: IconButton(
                   tooltip: 'Call Us',
-                  onPressed: () async {
-                    // final phoneNumber = '1234567890';
-                    // final url = 'tel:$phoneNumber';
-                    // if (await canLaunch(url)) {
-                    //   await launch(url);
-                    // } else {
-                    //   throw 'Could not launch $url';
-                    // }
-                  },
+                  onPressed: () async {},
                   icon: const Icon(FontAwesomeIcons.phone)),
             ),
             backgroundColor: Colors.white,
             appBar: AppBar(
-              title: const Text('Home '),
+              title:  Text(cubit.apparTitles[cubit.currentIndex]),
               centerTitle: true,
               leading: Padding(
                 padding: const EdgeInsets.all(2.0),
@@ -97,15 +89,16 @@ class _HomeViewState extends State<HomeView> {
                 unselectedItemColor: Colors.black.withOpacity(0.8),
                 items: const [
                   BottomNavigationBarItem(
-                      icon: Icon(FontAwesomeIcons.house), label: 'home'),
+                      icon: Icon(FontAwesomeIcons.code), label: 'Application'),
                   BottomNavigationBarItem(
-                      icon: Icon(FontAwesomeIcons.computer), label: 'computer'),
+                      icon: Icon(FontAwesomeIcons.photoFilm),
+                      label: 'Montague'),
                   BottomNavigationBarItem(
-                      icon: Icon(FontAwesomeIcons.mobileScreenButton),
-                      label: 'Users'),
+                      icon: Icon(FontAwesomeIcons.cameraRetro),
+                      label: 'Design'),
                   BottomNavigationBarItem(
-                      icon: Icon(FontAwesomeIcons.textWidth),
-                      label: 'decument'),
+                      icon: Icon(FontAwesomeIcons.bullhorn),
+                      label: 'Marketing'),
                   // BottomNavigationBarItem(
                   //     icon: Icon(FontAwesomeIcons.phone), label: 'contact'),
                 ],

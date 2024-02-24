@@ -20,9 +20,16 @@ class IcanCubit extends Cubit<IcanState> {
     DesignSection(),
     AdvertisingSection(),
   ];
+   List <String> apparTitles=[
+    'Programing',
+    'Monatgue',
+    'Graphic Design & logos',
+    'Marketing'
+   ];
   List<String> titlels = const [];
   void changeBottomNav(index) {
     currentIndex = index;
     emit(IcanChangeBottomNavState());
   }
+ 
 }

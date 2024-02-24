@@ -41,11 +41,12 @@ class _SplashViewState extends State<SplashView>
             padding: const EdgeInsets.only(right: 10),
             child: Image.asset(
               'assets/images/ican after edit.jpg',
+              width: 200,
               //  scale:1,
             ),
           ),
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 60),
+            padding: const EdgeInsets.symmetric(horizontal: 90),
             child: Container(
               height: 1,
               color: Colors.grey,
