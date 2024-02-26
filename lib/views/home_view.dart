@@ -15,22 +15,7 @@ class HomeView extends StatefulWidget {
 class _HomeViewState extends State<HomeView> {
   @override
   Widget build(BuildContext context) {
-    String selectedValue = 'item1';
-    final List<DropdownMenuItem<String>> items = [
-      const DropdownMenuItem(
-        value: 'item1',
-        child: Icon(Icons.home),
-      ),
-      const DropdownMenuItem(
-        value: 'item2',
-        child: Icon(Icons.settings),
-      ),
-      const DropdownMenuItem(
-        value: 'item3',
-        child: Icon(Icons.settings),
-      ),
-    ];
-
+   
     return BlocProvider<IcanCubit>(
       create: (context) => IcanCubit(),
       child: BlocConsumer<IcanCubit, IcanState>(
@@ -70,7 +55,9 @@ class _HomeViewState extends State<HomeView> {
                     ),
                   ),
                   onPressed: () {
-                   Navigator.of(context).push(MaterialPageRoute(builder: (context) => const CompanyView(),));
+                    Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => const CompanyView(),
+                    ));
                   },
                 )
               ],
@@ -97,6 +84,9 @@ class _HomeViewState extends State<HomeView> {
                   BottomNavigationBarItem(
                       icon: Icon(FontAwesomeIcons.bullhorn),
                       label: 'Marketing'),
+                  BottomNavigationBarItem(
+                      icon: Icon(FontAwesomeIcons.screwdriverWrench),
+                      label: 'Repairing'),
                   // BottomNavigationBarItem(
                   //     icon: Icon(FontAwesomeIcons.phone), label: 'contact'),
                 ],

@@ -5,6 +5,7 @@ import 'package:ican_app/views/widgets/adv_section.dart';
 import 'package:ican_app/views/widgets/design_section.dart';
 import 'package:ican_app/views/widgets/montague.dart';
 import 'package:ican_app/views/widgets/programing_section.dart';
+import 'package:ican_app/views/widgets/repairing_section.dart';
 
 class IcanCubit extends Cubit<IcanState> {
   IcanCubit() : super(IcanInitState());
@@ -19,12 +20,14 @@ class IcanCubit extends Cubit<IcanState> {
     MontagueSection(),
     DesignSection(),
     AdvertisingSection(),
+    RepairingSection()
   ];
    List <String> apparTitles=[
     'Programing',
     'Monatgue',
     'Graphic Design & logos',
-    'Marketing'
+    'Marketing',
+    'Reparing'
    ];
   List<String> titlels = const [];
   void changeBottomNav(index) {

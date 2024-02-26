@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:ican_app/views/repair_view.dart';
 
-class DesignSection extends StatelessWidget {
-  const DesignSection({super.key});
+class RepairingSection extends StatelessWidget {
+  const RepairingSection({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -11,33 +12,37 @@ class DesignSection extends StatelessWidget {
         children: [
           Padding(
             padding: EdgeInsets.all(10.0),
-            child: CutomScrollItemDesign(
+            child: CutomScrollItemRepair(
               imageUrl:
-                  'https://img.freepik.com/free-photo/abstract-colorful-splash-3d-background-generative-ai-background_60438-2494.jpg?w=826&t=st=1708630449~exp=1708631049~hmac=97cd470c64d52bb5e728689ce09b6c1d0f779389be19beb68bb24044367a191a',
+                  'https://img.freepik.com/free-vector/flat-computer-engineering-concept_23-2148154728.jpg?w=740&t=st=1708881856~exp=1708882456~hmac=c35786b5cde325dd7c06559de971c91ca1c0ceb420d108b1fbed3b8043fb5ead',
             ),
           ),
-          DesignText()
+          RepairDescreption()
         ],
       ),
     );
   }
 }
 
-class CutomScrollItemDesign extends StatelessWidget {
-  const CutomScrollItemDesign({
+class CutomScrollItemRepair extends StatelessWidget {
+  const CutomScrollItemRepair({
     super.key,
     required this.imageUrl,
+    this.isView = false,
   });
   final String imageUrl;
+  final bool isView;
 
   @override
   Widget build(BuildContext context) {
     var width = MediaQuery.of(context).size.width;
     return GestureDetector(
       onTap: () {
-        // Navigator.of(context).push(MaterialPageRoute(
-        //   builder: (context) => sectionWedget,
-        // ));
+        isView
+            ? () {}
+            : Navigator.of(context).push(MaterialPageRoute(
+                builder: (context) => const RepairView(),
+              ));
       },
       child: Column(
         children: [
@@ -80,7 +85,7 @@ class CutomScrollItemDesign extends StatelessWidget {
                   ),
                   const Spacer(),
                   Text(
-                    "Graphic Designs & Logos",
+                    "Computer Repair",
                     style: GoogleFonts.lato(
                         color: Colors.black,
                         fontSize: 18,
@@ -88,7 +93,7 @@ class CutomScrollItemDesign extends StatelessWidget {
                   ),
                   Padding(
                     padding: const EdgeInsets.symmetric(
-                        horizontal: 78.0, vertical: 12),
+                        horizontal: 100.0, vertical: 12),
                     child: Container(
                       height: 1,
                       color: Colors.grey,
@@ -107,8 +112,8 @@ class CutomScrollItemDesign extends StatelessWidget {
   }
 }
 
-class DesignText extends StatelessWidget {
-  const DesignText({super.key});
+class RepairDescreption extends StatelessWidget {
+  const RepairDescreption({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -117,25 +122,28 @@ class DesignText extends StatelessWidget {
       child: Column(
         children: [
           Text(
-            'في عالم يزداد اعتمادًا على التواصل الاجتماعي، أصبح وجود إعلانات مُؤثرة على المنصات المختلفة ضروريًا لنجاح أي عمل تجاري.',
-            maxLines: 3,
+            'لا تقلق بشأن أعطال الكمبيوتر! قسم الصيانة لدينا في خدمتك.\nحلول سريعة وفعالة لجميع مشاكل الكمبيوتر، من البرامج إلى الأجهزة.\nدعم فني مُتميز يُلبي احتياجاتك ويُحافظ على كفاءة أجهزتك.',
+            maxLines: 6,
             textDirection: TextDirection.rtl,
             textAlign: TextAlign.right,
             style: GoogleFonts.mada(fontSize: 22),
           ),
           const SizedBox(
-            height: 6,
+            height: 4,
           ),
           Text(
-            'تُقدم [ICan] حلولًا إعلانية مُخصصة تناسب احتياجاتك وأهدافك، وتُساعدك على الوصول إلى جمهورك المستهدف على مختلف منصات التواصل الاجتماعي.',
-            maxLines: 3,
+            'يُعد قسم الصيانة في شركتنا ركيزة أساسية لدعم عملائنا وضمان استمرارية أعمالهم.',
+            maxLines: 6,
             textDirection: TextDirection.rtl,
             textAlign: TextAlign.right,
             style: GoogleFonts.mada(fontSize: 18),
           ),
+          const SizedBox(
+            height: 4,
+          ),
           Text(
-            'مع فريقنا المتميز من الخبراء، نضمن لك حملات إعلانية ناجحة تُحقق لك أفضل النتائج.',
-            maxLines: 3,
+            'نُقدم مجموعة واسعة من خدمات الصيانة لجميع أنواع أجهزة الكمبيوتر، من أجهزة سطح المكتب إلى أجهزة اللابتوب والخوادم',
+            maxLines: 6,
             textDirection: TextDirection.rtl,
             textAlign: TextAlign.right,
             style: GoogleFonts.mada(fontSize: 18),

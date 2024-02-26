@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:ican_app/views/widgets/custom_social_avatar.dart';
 import 'package:ican_app/views/widgets/programing_section.dart';
 
 class AndroidViewSection extends StatelessWidget {
@@ -23,6 +24,12 @@ class AndroidViewSection extends StatelessWidget {
               height: 12,
             ),
             DescriptionTopic(topic: 'Android Apllication :'),
+            Padding(
+              padding: EdgeInsets.all(8.0),
+              child: CustomSocialAvatar(),
+            ),
+            SizedBox(height: 15,)
+            
           ],
         ),
       ),
@@ -67,7 +74,7 @@ class DescriptionTopic extends StatelessWidget {
             textDirection: TextDirection.rtl,
             //overflow: TextOverflow.fade,
             textAlign: TextAlign.right,
-            style: GoogleFonts.mada(fontSize: 16),
+            style: GoogleFonts.mada(fontSize: 18),
           ),
           const SizedBox(
             height: 6,
@@ -78,8 +85,13 @@ class DescriptionTopic extends StatelessWidget {
             textDirection: TextDirection.rtl,
             //overflow: TextOverflow.fade,
             textAlign: TextAlign.right,
-            style: GoogleFonts.mada(fontSize: 16),
+            style: GoogleFonts.mada(fontSize: 18),
           ),
+          Text('نُقدم لك خدمة عملاء مميزة ونُتابع معك تقدم تطوير تطبيقك بشكل مستمر.', maxLines: 2,
+            textDirection: TextDirection.rtl,
+            //overflow: TextOverflow.fade,
+            textAlign: TextAlign.right,
+            style: GoogleFonts.mada(fontSize: 18),)
         ],
       ),
     );

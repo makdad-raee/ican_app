@@ -156,7 +156,7 @@ class ProgramingDescreption extends StatelessWidget {
             textDirection: TextDirection.rtl,
             //overflow: TextOverflow.fade,
             textAlign: TextAlign.right,
-            style: GoogleFonts.mada(fontSize: 16),
+            style: GoogleFonts.mada(fontSize: 18),
           ),
           Text(
             ' - ارفع علامتك التجارية إلى آفاق جديدة مع حلولنا المُتكاملة لتطوير التطبيقات.',
@@ -164,8 +164,16 @@ class ProgramingDescreption extends StatelessWidget {
             textDirection: TextDirection.rtl,
             //overflow: TextOverflow.fade,
             textAlign: TextAlign.right,
-            style: GoogleFonts.mada(fontSize: 16),
+            style: GoogleFonts.mada(fontSize: 18),
           ),
+          Text(
+            'نُقدم لك خدمة عملاء مميزة ونُتابع معك تقدم تطوير تطبيقك بشكل مستمر.',
+            maxLines: 2,
+            textDirection: TextDirection.rtl,
+            //overflow: TextOverflow.fade,
+            textAlign: TextAlign.right,
+            style: GoogleFonts.mada(fontSize: 18),
+          )
         ],
       ),
     );
